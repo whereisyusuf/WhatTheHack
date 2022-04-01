@@ -19,7 +19,7 @@ You will then setup an AKS cluster keeping PCI-DSS requirements in mind. Finally
    - Setup the Azure Environment
 - Challenge 2: **[Regulated AKS and Private Clusters](Student/02-aks_private.md)**
    - Deploy the application in an AKS cluster with strict network requirements
-- Challenge 3: **[Secrets and Configuration Management](Student/03-aks_secrets.md)**
+- Challenge 3: **[Workload Deployment](Student/03-workload.md)**
    - Harden secret management with the help of Azure Key Vault
 - Challenge 4: **[AKS Security](Student/04-aks_security.md)**
    - Explore AKS security concepts such as Azure Policy for Kubernetes
