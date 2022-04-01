@@ -57,7 +57,7 @@ Following the steps below will result in an Azure AD configuration that will be 
    az ad group member add -g $AADOBJECTID_GROUP_CLUSTERADMIN --member-id $AADOBJECTID_USER_CLUSTERADMIN
    ```
 
-### A. Workload Identity
+### B. Workload Identity
 * Follow the instructions to [enable Azure AD Pod Identity](https://docs.microsoft.com/azure/aks/use-azure-ad-pod-identity#before-you-begin). You do not need to install the preview CLI extension or follow other instructions on this page.
 
 #### Steps
@@ -71,7 +71,7 @@ Following the steps below will result in an Azure AD configuration that will be 
    # When all say "Registered" then re-register the AKS resource provider
    az provider register --namespace Microsoft.ContainerService
    ```
- ### A. Clone Repository
+ ### C. Clone Repository
    Fork this repository and clone it locally. 🛑
 
    ```bash
@@ -81,7 +81,7 @@ Following the steps below will result in an Azure AD configuration that will be 
    cd aks-baseline-regulated
    ```
    
-### A. TLS Certificates 
+### D. TLS Certificates 
 
 #### Steps
 
@@ -130,7 +130,7 @@ Following the steps below will result in an Azure AD configuration that will be 
    INGRESS_CONTROLLER_CERTIFICATE_BASE64=$(cat ingress-internal-aks-ingress-contoso-com-tls.crt | base64 | tr -d '\n')
    ```
 
-### A. Resource Groups
+### E. Resource Groups
 
 The following three resource groups will be created in the steps below.
 
@@ -143,7 +143,7 @@ The following three resource groups will be created in the steps below.
 
 Both Azure Kubernetes Service and Azure Image Builder Service use a concept of a dynamically-created _infrastructure_ resource group. So in addition to the four resource groups mentioned above, as you follow these instructions, you'll end up with six resource groups; two of which are automatically created and their lifecycle tied to their owning service. You will not see these two infrastructure resource groups get created until later in the walkthrough when their owning service is created.
 
-### A. Azure Policies
+### F. Azure Policies
 To help govern our resources, there are policies we apply over the scope of these resource groups. These policies will also be created in the steps below.
 
 | Policy Name                    | Scope                           | Purpose                                                                                           |
@@ -193,7 +193,7 @@ Consider evaluating additional Azure Policies to help guard your subscription fr
 * External accounts with owner permissions should be removed from your subscription
 * Network interfaces should not have public IPs
 
-### A. Networking in this architecture
+### G. Networking in this architecture
 
 Egressing your spoke traffic through a hub network (following the hub-spoke model), is a critical component of this AKS architecture. Your organization's networking team will likely have a specific strategy already in place for this; such as a _Connectivity_ subscription already configured for regional egress. In this walkthrough, we are going to implement this recommended strategy in an illustrative manner, however you will need to adjust based on your specific situation when you implement this cluster for production. Hubs are usually a centrally-managed and governed resource in an organization, and not typically workload specific. The steps that follow create the hub (and spokes) as a stand-in for the work that you'd coordinate with your networking team.
 
