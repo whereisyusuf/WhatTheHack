@@ -21,10 +21,8 @@ You will then setup an AKS cluster keeping PCI-DSS requirements in mind. Finally
    - Deploy the application in an AKS cluster with strict network requirements
 - Challenge 3: **[Workload Deployment](Students/03-workload.md)**
    - Harden secret management with the help of Azure Key Vault
-- Challenge 4: **[AKS Security](Studenst/04-aks_security.md)**
-   - Explore AKS security concepts such as Azure Policy for Kubernetes
-- Challenge 5: **[Protecting Data](Students/05-aks_protect_data.md)**
-   - Further protect the application data
+- Challenge 4: **[Final Validation](Studenst/04-validate.md)**
+   - Validate AKS security concepts for your application 
 
 You can find the source code and documentation in the resources files provided to you for the hack.
 
