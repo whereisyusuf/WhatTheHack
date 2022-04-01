@@ -15,7 +15,7 @@ You will then setup an AKS cluster keeping PCI-DSS requirements in mind. Finally
 
 ## Challenges
 
-- Challenge 1: **[Prepare](Student/01-prepare.md)**
+- Challenge 1: **[Prepare](Students/01-prepare.md)**
    - Setup the Azure Environment
 - Challenge 2: **[Regulated AKS and Private Clusters](Student/02-aks_private.md)**
    - Deploy the application in an AKS cluster with strict network requirements
