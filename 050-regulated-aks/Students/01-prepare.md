@@ -219,7 +219,3 @@ Since this walkthrough is expected to be deployed isolated from existing infrast
 
       * `hubVnetId` - which you'll query in future steps when creating connected regional spokes. E.g. `/subscriptions/[subscription id]/resourceGroups/rg-enterprise-networking-hubs/providers/Microsoft.Network/virtualNetworks/vnet-eastus2-hub`
 
-
-### Next step
-
-:arrow_forward: [Deploy the regional hub network](./05-networking-hub.md).
