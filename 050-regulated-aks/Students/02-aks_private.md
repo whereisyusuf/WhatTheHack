@@ -58,7 +58,7 @@ Now that we have our image building network created, egressing through our hub, 
    az deployment sub create -f jumpbox/createsubscriptionroles.bicep -l centralus -n DeployAibRbacRoles
    ```
 
-1. Create the AKS jump box image template. (🛑 _if not using the custom roles created above._)
+1. Create the AKS jump box image template. (🛑 **_if not using the custom roles created above - use the hardcoded values for ROLEID_NETWORKING and ROLEID_IMGDEPLOY and skip the "az deployment sub show" for both)
 
    Next you are going to deploy the image template and Azure Image Builders's managed identity. This is being done directly into our workload resource group for simplicity. You can choose to deploy this to a separate resource group if you wish. This "golden image" generation process would typically happen out-of-band to the cluster management.
 
