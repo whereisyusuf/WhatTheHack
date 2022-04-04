@@ -168,6 +168,12 @@ To help govern our resources, there are policies we apply over the scope of thes
 #### Steps
 Perform subscription-level deployment.
 
+   Check for a pre-existing resource group with the name networkWatcherRG.
+
+   ```bash
+   NETWORK_WATCHER_RG_REGION=$(az group list --query "[?name=='networkWatcherRG' || name=='NetworkWatcherRG'].location" -o tsv)
+   ```
+
    This will deploy the resource groups, Azure Policies, and Microsoft Defender for Cloud configuration all as identified above.
 
    ```bash
