@@ -1,6 +1,6 @@
 
 # Prerequisites
-This is the starting point for the end-to-end instructions on deploying the [AKS Baseline for Regulated Workloads reference implementation](/050-regulated-aks/README.md). There is required access and tooling you'll need in order to accomplish this. Follow the instructions below and on the subsequent pages so that you can get your environment and subscription ready to proceed with the AKS cluster creation.
+This is the starting point for the end-to-end instructions on deploying the [AKS Baseline for Regulated Workloads reference implementation](/050-regulated-aks/Readme.md). There is required access and tooling you'll need in order to accomplish this. Follow the instructions below and on the subsequent pages so that you can get your environment and subscription ready to proceed with the AKS cluster creation.
 
 ### A. Azure AD Tenant
 Azure AD [User Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#user-administrator-permissions) is _required_ to create a "break glass" AKS admin Active Directory Security Group and User. For this exercise, consider [creating a new tenant](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant#create-a-new-tenant-for-your-organization) to use while evaluating this implementation. 
@@ -27,7 +27,7 @@ Following the steps below will result in an Azure AD configuration that will be 
 
 1. Log in to the tenant where Kubernetes Cluster API authorization will be associated with. 🛑
 
-   Capture the Azure AD Tenant ID that will be associated with your cluster's Kubernetes RBAC for Cluster API access. This is _typically_ the same tenant as your Azure RBAC, see [Azure AD tenant selection](#Azure-AD-tenant-selection) above for more details. However, if you do not have access to manage Azure AD groups and permissions, you may create a temporary tenant specifically for this walkthrough so that you're not blocked at this point.
+   Capture the Azure AD Tenant ID that will be associated with your cluster's Kubernetes RBAC for Cluster API access. This is _typically_ the same tenant as your Azure RBAC, see [Azure AD tenant selection](#Azure-AD-tenant-selection) above for more details. 
 
    ```bash
    az login -t <Replace-With-ClusterApi-AzureAD-TenantId> --allow-no-subscriptions
