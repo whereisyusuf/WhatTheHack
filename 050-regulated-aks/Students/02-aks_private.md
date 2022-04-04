@@ -237,4 +237,4 @@ Once web traffic hits Azure Application Gateway, public-facing TLS is terminated
 
 ### Next step
 
-:arrow_forward: [Prepare to bootstrap the cluster](./10-pre-bootstrap.md)
+:arrow_forward: [Deploy Workload to your cluster](./03-workload.md)
