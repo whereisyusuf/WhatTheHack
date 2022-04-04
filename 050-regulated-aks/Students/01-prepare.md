@@ -220,6 +220,9 @@ Since this walkthrough is expected to be deployed isolated from existing infrast
    # [This takes about eight minutes to run.]
    az deployment group create -g rg-enterprise-networking-hubs -f networking/hub-region.v0.json -p location=eastus2
    ```
+   Valid regions are 
+   ```       australiaeast,canadacentral,centralus,eastus,eastus2,westus2,francecentral,germanywestcentral,northeurope,southafricanorth,southcentralus,uksouth,westeurope,japaneast,southeastasia
+```
 
    The hub deployment will output the following:
 
