@@ -220,11 +220,13 @@ The next few steps will walk through considerations that are specific to the fir
 
    # Deploy "in-scope" components.  These will live in the a0005-i namespace and will be
    # scheduled on the aks-npinscope01 node pool - dedicated to just those workloads.
+   kubectl create ns a0005-i
    kubectl apply -k a0005-i/web-frontend
    kubectl apply -k a0005-i/microservice-c
 
    # Deploy "out-of-scope" components. These will live in the a0005-o namespace and will
    # be scheduled on the aks-npooscope01 node pool - used for all non in-scope components.
+   kubectl create ns a0005-o
    kubectl apply -k a0005-o/microservice-a
    kubectl apply -k a0005-o/microservice-b
    ```
