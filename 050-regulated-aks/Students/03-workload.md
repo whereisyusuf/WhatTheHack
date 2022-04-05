@@ -14,7 +14,7 @@ Your GitHub repo will be the source of truth for your cluster's configuration. T
 
    ```bash
    # Replace the text YOUR_ACR_NAME with the name of your ACR created in the Resource Group rg-bu0001a0005
-   ACR_NAME="YOUR-ACR-NAME"
+   ACR_NAME=YOUR-ACR-NAME
    cd cluster-manifests
    sed -i "s/REPLACE_ME_WITH_YOUR_ACRNAME/${ACR_NAME}/g" */kustomization.yaml
 
