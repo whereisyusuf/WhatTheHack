@@ -32,6 +32,8 @@ Your GitHub repo will be the source of truth for your cluster's configuration. T
    You'll be using the [Secrets Store CSI Driver for Kubernetes](https://docs.microsoft.com/azure/aks/csi-secrets-store-driver) to mount the ingress controller's certificate which you stored in Azure Key Vault. Once mounted, your ingress controller will be able to use it. To make the CSI Provider aware of this certificate, it must be described in a `SecretProviderClass` resource. You'll update the supplied manifest file with this information now.
 
    ```bash
+   # Replace the string YOUR-TENANT-ID with the ID of your tenant
+   TENANTID_AZURERBAC=YOUR-TENANT-ID
    KEYVAULT_NAME=$(az deployment group show --resource-group rg-bu0001a0005 -n cluster-stamp --query properties.outputs.keyVaultName.value -o tsv)
 
    sed -i -e "s/KEYVAULT_NAME/${KEYVAULT_NAME}/" -e "s/KEYVAULT_TENANT/${TENANTID_AZURERBAC}/" ingress-nginx/akv-tls-provider.yaml
