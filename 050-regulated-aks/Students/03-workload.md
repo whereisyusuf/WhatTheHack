@@ -254,4 +254,4 @@ The workload (split across four components - `web-frontend`, `microservice-a`, `
 
 ### Next step
 
-:arrow_forward: [End-to-End Validation](./13-validation.md)
+:arrow_forward: [End-to-End Validation](./04-validate.md)
