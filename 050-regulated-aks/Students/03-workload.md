@@ -173,7 +173,10 @@ The next few steps will walk through considerations that are specific to the fir
 
 #### Steps
 
-1. Use your Azure Container Registry build agents to build and quarantine the workload.
+1. Use your Azure Container Registry build agents to build and quarantine the workload. <br /><br />
+   **In case quarantine is not desired:** <br />
+   a. In Step No. 1 use $ACR_NAME instead of ACR_NAME_QUARANTINE <br />
+   b. Skip Step No. 2
 
    ```bash
    # [This takes about three minutes to run.]
@@ -194,7 +197,7 @@ The next few steps will walk through considerations that are specific to the fir
    ```bash
    cd workload
    sed -i "s/REPLACE_ME_WITH_YOUR_ACRNAME/${ACR_NAME}/g" */*/kustomization.yaml
-
+   
    git commit -a -m "Update the four workload images to use my Azure Container Registry instance."
    ```
 
