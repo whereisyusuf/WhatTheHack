@@ -10,9 +10,11 @@ Your GitHub repo will be the source of truth for your cluster's configuration. T
 
 #### Steps
 
-1. Update kustomization files to use images from your container registry.
+1. Update kustomization files to use images from your container registry. For this look-up the ACR created in the Resource Group **rg-bu0001a0005** and assign it to the variable **ACR_NAME**.
 
    ```bash
+   # Replace the text YOUR_ACR_NAME with the name of your ACR created in the Resource Group rg-bu0001a0005
+   ACR_NAME=YOUR-ACR-NAME
    cd cluster-manifests
    sed -i "s/REPLACE_ME_WITH_YOUR_ACRNAME/${ACR_NAME}/g" */kustomization.yaml
 
