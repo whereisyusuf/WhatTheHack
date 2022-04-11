@@ -72,13 +72,14 @@ Following the steps below will result in an Azure AD configuration that will be 
    az provider register --namespace Microsoft.ContainerService
    ```
  ### C. Clone Repository
-   Fork this repository and clone it locally. 🛑
+   Fork this repository and clone it locally. Switch to the **regulated-aks** branch. 🛑
 
    ```bash
    GITHUB_ACCOUNT_NAME=YOUR-GITHUB-ACCOUNT-NAME-GOES-HERE
 
-   git clone https://github.com/${GITHUB_ACCOUNT_NAME}/aks-baseline-regulated.git
-   cd aks-baseline-regulated
+   git clone https://github.com/${GITHUB_ACCOUNT_NAME}/WhatTheHack.git
+   git checkout regulated-aks
+   cd WhatTheHack/050-regulated-aks/Students/Resources
    ```
    
 ### D. TLS Certificates 
