@@ -72,8 +72,8 @@ Following the steps below will result in an Azure AD configuration that will be 
    az provider register --namespace Microsoft.ContainerService
    ```
  ### C. Clone Repository
-   Fork this repository and clone it locally. 🛑
-
+   Fork the repository at https://github.com/mspnp/aks-baseline-regulated and then clone it locally. 🛑
+   
    ```bash
    GITHUB_ACCOUNT_NAME=YOUR-GITHUB-ACCOUNT-NAME-GOES-HERE
 
